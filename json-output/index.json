@@ -1,0 +1,71 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Testing Login functionality",
+        "description": "",
+        "id": "checking-the-login-function;testing-login-functionality",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 23571612332,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Launch the URL",
+            "match": {
+              "location": "StepDefinition.Launch_the_URL()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 693999197,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Input the user credentials",
+            "match": {
+              "location": "StepDefinition.Input_the_user_credentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 143276551,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Clicking the login button",
+            "match": {
+              "location": "StepDefinition.Clicking_the_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10269605071,
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[(2) Facebook]\u003e but was:\u003c[Facebook – log in or sign up]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat org.StepDefintion.StepDefinition.Home_Page(StepDefinition.java:49)\r\n\tat ✽.Then Home Page(./FeatureFileFolder/login.feature:7)\r\n",
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "Home Page",
+            "match": {
+              "location": "StepDefinition.Home_Page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Checking the login function",
+    "description": "",
+    "id": "checking-the-login-function",
+    "keyword": "Feature",
+    "uri": "./FeatureFileFolder/login.feature"
+  }
+]

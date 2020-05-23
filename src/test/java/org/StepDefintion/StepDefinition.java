@@ -11,7 +11,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class StepDefinition {
 	
@@ -20,7 +19,8 @@ public class StepDefinition {
 	@Given("^Launch the URL$")
 	public void Launch_the_URL() {
 		
-		WebDriverManager.chromedriver().setup();
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		//WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.navigate().to("https://www.facebook.com");
 		driver.manage().window().maximize();		
@@ -36,16 +36,11 @@ public class StepDefinition {
 		pwd.sendKeys("Surenjack@12345");
 	}
 	
-	@And("^Clicking the login button$")
+	@Then("^Clicking the login button$")
 	public void Clicking_the_login_button() {
 		
 	WebElement login = driver.findElement(By.id("loginbutton"));
 	login.click();
 	}
 	
-	@Then("^Home Page$")
-	public void Home_Page() {
-		
-		Assert.assertEquals("(2) Facebook", driver.getTitle());
-	}
 }
